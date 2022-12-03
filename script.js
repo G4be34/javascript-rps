@@ -36,9 +36,23 @@ for (let i = 0; i < 100; i++) {
     let roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);
     gameScore(roundResult); 
+    console.log("Your score is " + playerScore)
+    console.log("The computers score is " + computerScore)
+    
     if (playerScore === 5 || computerScore === 5) {
         break;
     }
 }
 
-
+if (playerScore < computerScore) {
+    alert(computerWinGame)
+} else if (playerScore > computerScore) {
+    alert(computerWinGame)
+}
+function gameScore(roundResult) {
+    if (roundResult === playerWinRound) {
+        playerScore++
+    } else if (roundResult === computerWinRound) {
+        computerScore++
+    } else (draws++)
+}
