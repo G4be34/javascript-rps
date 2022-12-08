@@ -47,7 +47,7 @@ for (let i = 0; i < 100; i++) {
 if (playerScore < computerScore) {
     alert(computerWinGame)
 } else if (playerScore > computerScore) {
-    alert(playerWinGame)
+    alert(playerWinGame )
 }
 function gameScore(roundResult) {
     if (roundResult === playerWinRound) {
