@@ -2,6 +2,10 @@ let playerScore = 0
 let computerScore = 0
 let draws = 0
 
+let rockBtn = document.getElementById('rock');
+let paperBtn = document.getElementById('paper');
+let scissorsBtn = document.getElementById('scissors');
+
 
 function getComputerChoice(){
     const computerChoices = ['rock', 'paper', 'scissors'];
@@ -39,9 +43,6 @@ for (let i = 0; i < 100; i++) {
     console.log("Your score is " + playerScore)
     console.log("The computers score is " + computerScore)
     
-    if (playerScore === 5 || computerScore === 5) {
-        break;
-    }
 }
 
 if (playerScore < computerScore) {
