@@ -32,6 +32,8 @@ let roundDraw = "This round is a draw!";
 let playerWinGame = "Congrats! Player wins the game!";
 let computerWinGame = "Computer wins the game! Better luck next time!";
 let result = document.getElementById('results');
+let ps = document.getElementById('playerScore');
+let cs = document.getElementById('computerScore');
 
 rockBtn.addEventListener('click', () => {
     let playerSelection = 'rock';
@@ -39,8 +41,13 @@ rockBtn.addEventListener('click', () => {
     let roundResult = playRound(playerSelection, computerSelection);
     result.textContent = roundResult;
     gameScore(roundResult); 
-    console.log("Your score is " + playerScore)
-    console.log("The computers score is " + computerScore)
+    ps.textContent = "Your score is " + playerScore;
+    cs.textContent = "The computers score is " + computerScore;
+    if (playerScore === 5) {
+        result.textContent = playerWinGame;
+    } else if (computerScore === 5) {
+        result.textContent = computerWinGame;
+    };
 } );
 
 paperBtn.addEventListener('click', () => {
@@ -49,8 +56,13 @@ paperBtn.addEventListener('click', () => {
     let roundResult = playRound(playerSelection, computerSelection);
     result.textContent = roundResult;
     gameScore(roundResult); 
-    console.log("Your score is " + playerScore)
-    console.log("The computers score is " + computerScore)
+    ps.textContent = "Your score is " + playerScore;
+    cs.textContent = "The computers score is " + computerScore;
+    if (playerScore === 5) {
+        result.textContent = playerWinGame;
+    } else if (computerScore === 5) {
+        result.textContent = computerWinGame;
+    };
 });
 
 scissorsBtn.addEventListener('click', () => {
@@ -59,15 +71,15 @@ scissorsBtn.addEventListener('click', () => {
     let roundResult = playRound(playerSelection, computerSelection);
     result.textContent = roundResult;
     gameScore(roundResult); 
-    console.log("Your score is " + playerScore)
-    console.log("The computers score is " + computerScore)
+    ps.textContent = "Your score is " + playerScore;
+    cs.textContent = "The computers score is " + computerScore;
+    if (playerScore === 5) {
+        result.textContent = playerWinGame;
+    } else if (computerScore === 5) {
+        result.textContent = computerWinGame;
+    };
 });
 
-if (playerScore < computerScore) {
-    alert(computerWinGame)
-} else if (playerScore > computerScore) {
-    alert(playerWinGame )
-}
 function gameScore(roundResult) {
     if (roundResult === playerWinRound) {
         playerScore++
@@ -75,3 +87,8 @@ function gameScore(roundResult) {
         computerScore++
     } else (draws++)
 }
+
+
+
+
+
