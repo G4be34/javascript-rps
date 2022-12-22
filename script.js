@@ -26,17 +26,18 @@ function playRound(playerSelection, computerSelection) {
     }
 };
 
-let playerWinRound = "Player wins this round!"
-let computerWinRound = "Computer wins this round!"
-let roundDraw = "This round is a draw!"
-let playerWinGame = "Congrats! Player wins the game!"
-let computerWinGame = "Computer wins the game! Better luck next time!"
+let playerWinRound = "Player wins this round!";
+let computerWinRound = "Computer wins this round!";
+let roundDraw = "This round is a draw!";
+let playerWinGame = "Congrats! Player wins the game!";
+let computerWinGame = "Computer wins the game! Better luck next time!";
+let result = document.getElementById('results');
 
 rockBtn.addEventListener('click', () => {
     let playerSelection = 'rock';
     let computerSelection = getComputerChoice();
     let roundResult = playRound(playerSelection, computerSelection);
-    console.log(roundResult);
+    result.textContent = roundResult;
     gameScore(roundResult); 
     console.log("Your score is " + playerScore)
     console.log("The computers score is " + computerScore)
@@ -46,7 +47,7 @@ paperBtn.addEventListener('click', () => {
     let playerSelection = 'paper';
     let computerSelection = getComputerChoice();
     let roundResult = playRound(playerSelection, computerSelection);
-    console.log(roundResult);
+    result.textContent = roundResult;
     gameScore(roundResult); 
     console.log("Your score is " + playerScore)
     console.log("The computers score is " + computerScore)
@@ -56,7 +57,7 @@ scissorsBtn.addEventListener('click', () => {
     let playerSelection = 'scissors';
     let computerSelection = getComputerChoice();
     let roundResult = playRound(playerSelection, computerSelection);
-    console.log(roundResult);
+    result.textContent = roundResult;
     gameScore(roundResult); 
     console.log("Your score is " + playerScore)
     console.log("The computers score is " + computerScore)
