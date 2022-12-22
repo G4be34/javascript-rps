@@ -1,10 +1,18 @@
+body {
+    height: 100%;
+    width: auto;
+}
+
 #results {
-    background-color: blue;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
 }
 
 h1 {
-    background-color: red;
     display: flex;
+    margin-top: 60px;
+    justify-content: center;
 
 }
 
@@ -12,10 +20,35 @@ h1 {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    
+    height: 600px;
+    align-items: flex-end;
 }
 
 button {
+    height: 150px;
+    width: 150px;
+
+}
+
+p {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+#scores {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+}
+
+#playerScore, 
+#computerScore {
+    display: flex;
+    border-style: solid;
+    border-color: black;
     height: 50px;
-    width: 80px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
 }
