@@ -1,6 +1,10 @@
 body {
     height: 100%;
     width: auto;
+    background-image: url("images/realbackground.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(163, 159, 159);
 }
 
 #results {
@@ -22,6 +26,7 @@ h1 {
     width: 100%;
     height: 600px;
     align-items: flex-end;
+    
 }
 
 button {
@@ -51,4 +56,19 @@ p {
     width: 150px;
     justify-content: center;
     align-items: center;
+}
+
+#rock {
+    background-image: url("images/rockchoice.jpg");
+    background-size: cover;
+}
+
+#paper {
+    background-image: url("images/paperchoice.jpg");
+    background-size: 100%;
+}
+
+#scissors {
+    background-image: url("images/scissorschoice.jpg");
+    background-size: 100%;
 }
